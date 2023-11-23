@@ -6,30 +6,30 @@
 int solution(int member_age[], int member_age_len, char* transportations)
 {
 	int answer = 0;
-	int adult_expense = 0;
-	int child_expense = 0;
+	int adult = 0;
+	int child = 0;
 
 	if (transportations == "Bus")
-		adult_expense = 40000;
-		child_expense = 15000;
+		adult = 40000;
+		child = 15000;
 	else if (transportations == "Ship")
-		adult_expense = 30000;
-		child_expense = 13000;
+		adult = 30000;
+		child = 13000;
 	else if (transportations == "Airplane") 
-    adult_expense = 70000;
-		child_expense = 45000;
+   		adult = 70000;
+		child = 45000;
   
 	
   if (member_age_len >= 10) 
-		adult_expense -= adult_expense * 0.1;
-		child_expense -= child_expense * 0.2;
+		adult -= adult* 0.1;
+		child -= child* 0.2;
 
 	for (int i = 0; i < member_age_len; i++) 
   {
 		if (member_age[i] >= 20)
-			answer += adult_expense;
+			answer += adult;
 		else
-			answer += child_expense;
+			answer += child;
 	}
 
 	return answer;
