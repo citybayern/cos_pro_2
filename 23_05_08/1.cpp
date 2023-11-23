@@ -9,9 +9,7 @@ int solution(int temperature[], int temperature_len,int A,int B)
 	for (int i = A; i < B; i++)
 	{
 		if (temperature[i] > temperature[A] && temperature[i] > temperature[B])
-		{
 			answer++;
-		}
 	}
 
 	return answer;
